@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+
+<head>
+  <meta charset="UTF-8">
+  <title>One-Shot Experiment</title>
+  
+<style>
+body, html{
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+
+  font-family: courier;
+  font-size: 18px;
+
+  color: #333322;
+  font-weight: bold;
+}
+
+canvas{
+  width: 100%;
+  height: 100%;
+}
+
+.swatch{
+  width: 20%;
+  height: 20%;
+
+  border-style: solid;
+  border-right: 5px solid;
+  border-bottom: 8px solid;
+  border-radius: 10px;
+  border-color: white;
+
+  background-color: white;
+
+  margin: 0 auto;
+  margin-top: 2%;
+}
+
+.holder{
+  text-align: center;
+}
+
+li{
+  margin-bottom: 0.5%;
+  margin-top: 0.5%;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  display:inline-block;
+  height: 2px;
+  width: 5%;
+  background-color: white;
+  list-style-type: none;
+
+  border: 0px solid;
+  border-right: 0px solid;
+  border-bottom: 0px solid;
+  border-color: white;
+  border-radius: 0px;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  width: auto\9;
+}
+
+.button{
+  cursor: pointer;
+  background-color: white;
+  border-left: 0px solid;
+  border-right: 0px solid;
+  border-bottom: 0px solid;
+  border-top: 0px solid;
+  border-color: white;
+  border-radius: 1px;
+}
+
+.save{
+  margin: 2%;
+  margin-top: 2%;
+  display:inline-block;
+  height: 50px;
+  width: 20%;
+  background-color: white;
+
+  border: 2px solid;
+  border-right: 4px solid;
+  border-bottom: 5px solid;
+  border-color: #333322;
+  border-radius: 10px;
+
+  font-family: courier;
+  font-size: 20px;
+
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #333322;
+  cursor: pointer;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+h1{
+  text-align: center;
+  margin-top: 3%;
+  font-size: 20px;
+}
+
+</style>
+  
+</head>
+
+<body>
+
+  <h1 id = "level">One-Shot Task</h1>
+
+<div class = "swatch" id = "swatch"></div>
+
+<div class = "holder">
+
+<div style="text-align: justified; width: 30%; margin: 0 auto;">Select a symbol you associate with the colour displayed above, and then click on submit to complete the task.</div>
+
+<div class = "wrapper">
+  <button class = "save" type="button" id="btnSave" a href="">Submit</button>
+</div>
+
+<ul>
+  <li><button class = button id = "one" onclick="one()"><img src="static/_s1.png"/></button></li>
+  <li><button class = button id = "two" onclick="two()"><img src="static/_s2.png"/></button></li>
+  <li><button class = button id = "three" onclick="three()"><img src="static/_s3.png"/></button></li>
+  <li><button class = button id = "four" onclick="four()"><img src="static/_s4.png"/></button></li>
+  <li><button class = button id = "five" onclick="five()"><img src="static/_s5.png"/></button></li>
+  <li><button class = button id = "six" onclick="six()"><img src="static/_s6.png"/></button></li>
+  <li><button class = button id = "seven" onclick="seven()"><img src="static/_s7.png"/></button></li>
+  <li><button class = button id = "eight" onclick="eight()"><img src="static/_s8.png"/></button></li>
+  <li><button class = button id = "nine" onclick="nine()"><img src="static/_s9.png"/></button></li>
+  <li><button class = button id = "ten" onclick="ten()"><img src="static/_s10.png"/></button></li>
+  <li><button class = button id = "eleven" onclick="eleven()"><img src="static/_s11.png"/></button></li>
+  <li><button class = button id = "thirteen" onclick="thirteen()"><img src="static/_s13.png"/></button></li>
+  <li><button class = button id = "fourteen" onclick="fourteen()"><img src="static/_s14.png"/></button></li>
+  <li><button class = button id = "fifteen" onclick="fifteen()"><img src="static/_s15.png"/></button></li>
+  <li><button class = button id = "sixteen" onclick="sixteen()"><img src="static/_s16.png"/></button></li>
+  <li><button class = button id = "seventeen" onclick="seventeen()"><img src="static/_s17.png"/></button></li>
+  <li><button class = button id = "eighteen" onclick="eighteen()"><img src="static/_s18.png"/></button></li>
+  <li><button class = button id = "nineteen" onclick="nineteen()"><img src="static/_s19.png"/></button></li>
+  <li><button class = button id = "twenty" onclick="twenty()"><img src="static/_s20.png"/></button></li>
+  <li><button class = button id = "twenty-one" onclick="twenty-one()"><img src="static/_s21.png"/></button></li>
+  <li><button class = button id = "twenty-two" onclick="twenty-two()"><img src="static/_s22.png"/></button></li>
+  <li><button class = button id = "twenty-three" onclick="twenty-three()"><img src="static/_s23.png"/></button></li>
+  <li><button class = button id = "twenty-four" onclick="twenty-four()"><img src="static/_s24.png"/></button></li>
+  <li><button class = button id = "twenty-five" onclick="twenty-five()"><img src="static/_s25.png"/></button></li>
+  <li><button class = button id = "twenty-six" onclick="twenty-six()"><img src="static/_s26.png"/></button></li>
+  <li><button class = button id = "twenty-seven" onclick="twenty-seven()"><img src="static/_s27.png"/></button></li>
+  <li><button class = button id = "twenty-eight" onclick="twenty-eight()"><img src="static/_s28.png"/></button></li>
+  <li><button class = button id = "twenty-nine" onclick="twenty-nine()"><img src="static/_s29.png"/></button></li>
+  <li><button class = button id = "thirty" onclick="thirty()"><img src="static/_s30.png"/></button></li>
+  <li><button class = button id = "thirty-one" onclick="thirty-one()"><img src="static/_s31.png"/></button></li>
+  <li><button class = button id = "thirty-two" onclick="thirty-two()"><img src="static/_s32.png"/></button></li>
+  <li><button class = button id = "thirty-three" onclick="thirty-three()"><img src="static/_s33.png"/></button></li>
+  <li><button class = button id = "thirty-four" onclick="thirty-four()"><img src="static/_s34.png"/></button></li>
+  <li><button class = button id = "thirty-five" onclick="thirty-five()"><img src="static/_s35.png"/></button></li>
+  <li><button class = button id = "thirty-six" onclick="thirty-six()"><img src="static/_s36.png"/></button></li>
+</ul>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+var game;
+function randomFromArray(a) {
+  return a[Math.floor(Math.random() * a.length)];
+}
+function Game(a, b) {
+  this.currentColor;
+  this.colorDict = a;
+  this.swatch = b;
+  this.init = function() {
+    this.newColor();
+  };
+  this.newColor = function() {
+    this.currentColor = randomFromArray(Object.keys(this.colorDict));
+    this.swatch.style.backgroundColor = this.colorDict[this.currentColor];
+  };
+  this.init();
+}
+window.onload = function() {
+  var a;
+  game;
+  fetch("https://raw.githubusercontent.com/j-winters/one-shot/master/colours.json").then(function(a) {
+    return a.json();
+  }).then(function(b) {
+    a = b;
+    game = new Game(a, document.getElementById("swatch"), document.getElementById("one"), document.getElementById("two"), document.getElementById("three"), document.getElementById("four"), document.getElementById("five"), document.getElementById("six"), document.getElementById("seven"), document.getElementById("eight"), document.getElementById("nine"), document.getElementById("ten"), document.getElementById("eleven"), document.getElementById("thirteen"), document.getElementById("fourteen"), document.getElementById("fifteen"), 
+    document.getElementById("sixteen"), document.getElementById("seventeen"), document.getElementById("eighteen"), document.getElementById("nineteen"), document.getElementById("twenty"), document.getElementById("twenty-one"), document.getElementById("twenty-two"), document.getElementById("twenty-three"), document.getElementById("twenty-four"), document.getElementById("twenty-five"), document.getElementById("twenty-six"), document.getElementById("twenty-seven"), document.getElementById("twenty-eight"), 
+    document.getElementById("twenty-nine"), document.getElementById("thirty"), document.getElementById("thirty-one"), document.getElementById("thirty-two"), document.getElementById("thirty-three"), document.getElementById("thirty-four"), document.getElementById("thirty-five"), document.getElementById("thirty-six"));
+  })["catch"](function(a) {
+    return console.error(a);
+  });
+};
+var img = document.getElementsByTagName("li"), container = document.getElementsByTagName("ul")[0], rdo = [], child = [];
+cloneNode();
+createArray();
+shuffle();
+function randomImg() {
+  shuffle();
+  deleteChild();
+  for (var a = 0; 35 > a; a++) {
+    container.appendChild(child[rdo[a]]);
+  }
+}
+function shuffle() {
+  for (var a = img.length - 1; 0 < a; a--) {
+    var b = Math.floor(Math.random() * (a + 1)), c = rdo[a];
+    rdo[a] = rdo[b];
+    rdo[b] = c;
+  }
+}
+function deleteChild() {
+  for (; container.firstChild;) {
+    container.removeChild(container.firstChild);
+  }
+}
+function createArray() {
+  for (var a = 0; a < img.length; a++) {
+    rdo.push(a);
+  }
+}
+function cloneNode() {
+  for (var a = 0; a < img.length; a++) {
+    child[a] = img[a].cloneNode(!0);
+  }
+}
+randomImg();
+
+//(function (global) {
+//    output = global.localStorage.getItem("myOutput");
+//    alert(output)
+//}
+
+//var url = document.location.href,
+//      params = url.split('?')[1].split('&'),
+//      data = {}, tmp;
+//  for (var i = 0, l = params.length; i < l; i++) {
+//       tmp = params[i].split('=');
+//       data[tmp[0]] = tmp[1];
+//  }
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  document.addEventListener("click", function(a) {
+    output = []
+    if ("IMG" == a.target.tagName.toUpperCase()) {
+      //output.push(tmp)
+      output.push(a.target.src.split("/").pop())
+      output.push(swatch.style.backgroundColor)
+      //var b = tmp + ";Symbol: " + String(a.target.src.split("/").pop()) + ";Colour: " + String(swatch.style.backgroundColor);
+      //var b = a.target.src.split("/").pop() + swatch.style.backgroundColor
+      //var c = JSON.stringify(b)
+      document.getElementById("btnSave").onclick = function() {
+        var b = JSON.stringify(output)
+        $.post("/postmethod", {javascript_data:b});
+        location.href = "finish.html"
+      };
+    }
+  });
+});
+
+
+
+
+</script>
+
+</body>
+
+</html>
